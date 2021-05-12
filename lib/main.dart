@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Heading extends StatelessWidget { // state yang tidak bisa berubah (immutable)
+class Heading extends StatelessWidget {
+  // state yang tidak bisa berubah (immutable)
   final String text; // maka dari itu state harus dibuat FINAL
 
   Heading({this.text}); // dan value di set di constructor nya
@@ -42,7 +43,8 @@ class Heading extends StatelessWidget { // state yang tidak bisa berubah (immuta
   }
 }
 
-class BiggerText extends StatefulWidget { // state yang bisa berubah-ubah
+class BiggerText extends StatefulWidget {
+  // state yang bisa berubah-ubah
   final String text; // BUKAN STATE ASLI dari StatefulWidget
 
   const BiggerText({this.text});
@@ -50,7 +52,6 @@ class BiggerText extends StatefulWidget { // state yang bisa berubah-ubah
   @override
   _BiggerTextState createState() => _BiggerTextState();
 }
-
 
 class _BiggerTextState extends State<BiggerText> {
   double _textSize = 16.0; // STATE ASLI dari StatefulWidget
@@ -64,8 +65,17 @@ class _BiggerTextState extends State<BiggerText> {
         ElevatedButton(
           child: Text("Zoom In"),
           onPressed: () {
-            setState(() { // Mengubah nilai state harus dilakukan pada fungsi setState
+            setState(() {
+              // Mengubah nilai state harus dilakukan pada fungsi setState
               _textSize = 32.0;
+            });
+          },
+        ),
+        ElevatedButton(
+          child: Text("Zoom Out"),
+          onPressed: () {
+            setState(() {
+              _textSize = 16.0;
             });
           },
         )
