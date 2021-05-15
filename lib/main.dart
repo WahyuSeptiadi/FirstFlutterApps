@@ -43,28 +43,29 @@ class FirstScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Container( // ini bisa diluar Center
-          child: Text(
-            'Hi',
-            style: TextStyle(fontSize: 40, color: Colors.white),
-          ),
-          // color: Colors.blue,
-          width: 200,
-          height: 100,
-          padding: EdgeInsets.only(left: 80, top: 27),
-          margin: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-            color: Colors.red,
-            // shape: BoxShape.circle,
-            borderRadius: BorderRadius.circular(30),
-            boxShadow: [
-              BoxShadow(
-                color: Colors.black54,
-                offset: Offset(3, 6),
-                blurRadius: 15,
+        child: Container(
+          child: Row(
+            /* Penentu alignment letak widget */
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // mainAxisAlignment: MainAxisAlignment.spaceAround,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.start,
+            // mainAxisAlignment: MainAxisAlignment.center,
+            // mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+              IconButton(
+                icon: Icon(Icons.thumb_up),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.share),
+                onPressed: () {},
+              ),
+              IconButton(
+                icon: Icon(Icons.thumb_down),
+                onPressed: () {},
               ),
             ],
-            border: Border.all(color: Colors.amber, width: 2),
           ),
         ),
       ),
