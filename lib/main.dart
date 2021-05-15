@@ -43,7 +43,30 @@ class FirstScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Text('Hello world!'),
+        child: Container( // ini bisa diluar Center
+          child: Text(
+            'Hi',
+            style: TextStyle(fontSize: 40, color: Colors.white),
+          ),
+          // color: Colors.blue,
+          width: 200,
+          height: 100,
+          padding: EdgeInsets.only(left: 80, top: 27),
+          margin: EdgeInsets.all(10),
+          decoration: BoxDecoration(
+            color: Colors.red,
+            // shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(30),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.black54,
+                offset: Offset(3, 6),
+                blurRadius: 15,
+              ),
+            ],
+            border: Border.all(color: Colors.amber, width: 2),
+          ),
+        ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
