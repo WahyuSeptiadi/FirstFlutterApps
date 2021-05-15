@@ -43,30 +43,42 @@ class FirstScreen extends StatelessWidget {
         ],
       ),
       body: Center(
-        child: Container(
-          child: Row(
-            /* Penentu alignment letak widget */
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            // mainAxisAlignment: MainAxisAlignment.spaceAround,
-            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            // mainAxisAlignment: MainAxisAlignment.start,
-            // mainAxisAlignment: MainAxisAlignment.center,
-            // mainAxisAlignment: MainAxisAlignment.end,
-            children: <Widget>[
-              IconButton(
-                icon: Icon(Icons.thumb_up),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.share),
-                onPressed: () {},
-              ),
-              IconButton(
-                icon: Icon(Icons.thumb_down),
-                onPressed: () {},
-              ),
-            ],
-          ),
+        child: Column(
+          children: <Widget>[
+            Column(
+              children: [
+                IconButton(
+                  icon: Icon(Icons.thumb_up),
+                  onPressed: () {},
+                ),
+                Text(
+                  'LIKE OR\nDISLIKE',
+                  style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                ),
+                IconButton(
+                  icon: Icon(Icons.thumb_down),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  icon: Icon(Icons.thumb_up),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.share),
+                  onPressed: () {},
+                ),
+                IconButton(
+                  icon: Icon(Icons.thumb_down),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
