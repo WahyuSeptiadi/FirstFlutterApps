@@ -49,6 +49,10 @@ flutter:
     - images/kawah-putih.jpg
     - images/ranca-upas.jpg
     - images/taman-film.jpg
+    - images/jalan-asia-afrika.jpg
+    - images/stone-garden.jpg
+    - images/museum-geologi.jpg
+    - images/floating-market.png
 
   fonts:
     - family: Oxygen
